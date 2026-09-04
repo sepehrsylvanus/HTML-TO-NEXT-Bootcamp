@@ -1,0 +1,280 @@
+:root {
+  --abyss: #020c1b;
+  --deep: #051830;
+  --ocean: #0a2a4a;
+  --glow: #38bdf8;
+  --foam: #e6f1ff;
+  --muted: #8892b0;
+}
+
+/*پایه */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Vazirmatn", "Segoe UI", Tahoma, sans-serif;
+  background: var(--abyss);
+  color: var(--foam);
+  line-height: 1.9;
+}
+
+/* HEADER */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: rgba(2, 12, 27, 0.85);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--foam);
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.6rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.btn--primary {
+  background: var(--glow);
+  color: var(--abyss);
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.35);
+}
+
+.btn--ghost {
+  border: 1px solid var(--ocean);
+  color: var(--foam);
+}
+
+.btn--ghost:hover {
+  border-color: var(--glow);
+  color: var(--glow);
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: var(--glow);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+
+  background-image:
+    linear-gradient(180deg, rgba(2, 12, 27, 0.55), rgba(2, 12, 27, 0.9)),
+    url("images/hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+  max-width: 34rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--foam);
+  margin: 0 0 2rem;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* STATS */
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stat {
+  flex: 1 1 12rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-inline-start: 1px solid var(--ocean);
+}
+
+.stat:first-child {
+  border-inline-start: none;
+}
+
+.stat strong {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--glow);
+}
+
+.stat span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ZONES */
+.zones {
+  padding: 4rem 2rem;
+  max-width: 62rem;
+  margin-inline: auto;
+}
+
+.zones h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0, 0, 0.5rem;
+}
+
+.section-lead {
+  text-align: center;
+  color: var(--muted);
+  max-width: 30rem;
+  margin: 0 auto 2.5rem;
+}
+
+.zone-cards {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 1.2rem;
+}
+
+.zone {
+  flex: 1 1 14rem;
+  border-radius: 1rem;
+  border: 1px solid var(--ocean);
+  padding: 1.6rem 1.4rem;
+  transition: transform 0.2s ease;
+}
+
+.zone:hover {
+  transform: translateY(-6px);
+}
+
+.zone--sunlight {
+  background: linear-gradient(180deg, #0e4d75, #0a2a4a);
+}
+
+.zone--twilight {
+  background: linear-gradient(180deg, #0a3a5c, #072340);
+}
+
+.zone--midnight {
+  background: linear-gradient(180deg, #072540, #041627);
+}
+
+.zone--abyss {
+  background: linear-gradient(180deg, #04121f, #020c1b);
+}
+
+.zone h3 {
+  margin: 0 0 0.2rem;
+  font-size: 1.2rem;
+}
+
+.zone__depth {
+  display: block;
+  color: var(--glow);
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+}
+
+.zone p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.experience {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  padding: 4rem 2rem;
+  max-width: 62rem;
+  margin-inline: auto;
+}
+
+.experience img {
+  flex: 1 1 18rem;
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid var(--ocean);
+}
+
+.experience__text {
+  flex: 1 1 18rem;
+}
+
+.experience h2 {
+  font-size: 1.8rem;
+  margin: 0 0 0.8rem;
+}
+
+.experience__text ul {
+  padding-inline-start: 1.3rem;
+  color: var(--muted);
+  margin-bottom: 1.6rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--ocean);
+  padding: 2rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 40rem) {
+  .site-nav {
+    display: none;
+  }
+
+  .stat {
+    border-inline-start: none;
+    border-top: 1px solid var(--ocean);
+  }
+}
